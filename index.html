@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Secretary Portfolio</title>
+    <title>Preetha Dsouza | CS Management Trainee</title>
     <style>
         :root {
-            --black: #000000;
-            --dark-gray: #121212;
-            --medium-gray: #1E1E1E;
-            --light-gray: #F3F4F6;
-            --gold: #D4AF37;
-            --blue: #4169E1;
-            --white: #FFFFFF;
+            --navy: #0a192f;
+            --light-navy: #172a45;
+            --gold: #d4af37;
+            --white: #e6f1ff;
+            --gray: #8892b0;
         }
 
         * {
@@ -24,26 +21,25 @@
         }
 
         body {
-            background-color: var(--black);
-            color: var(--light-gray);
-            line-height: 1.6;
+            background-color: var(--navy);
+            color: var(--white);
+            line-height: 1.5;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
         }
 
         /* Header */
         header {
-            background-color: var(--black);
-            padding: 1.5rem 0;
+            background-color: var(--navy);
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid var(--medium-gray);
         }
 
         .header-container {
@@ -53,67 +49,47 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--gold);
-            letter-spacing: 1px;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         nav ul li a {
-            color: var(--light-gray);
+            color: var(--white);
             text-decoration: none;
-            font-weight: 500;
+            font-size: 0.9rem;
             transition: color 0.3s;
-            position: relative;
-            padding: 0.5rem 0;
         }
 
         nav ul li a:hover {
             color: var(--gold);
         }
 
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: width 0.3s;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
         /* Hero Section */
         .hero {
+            padding: 5rem 0 2rem;
             display: flex;
             align-items: center;
-            min-height: 100vh;
-            padding: 8rem 0 4rem;
         }
 
         .hero-content {
             display: flex;
             align-items: center;
-            gap: 4rem;
+            gap: 2rem;
         }
 
         .hero-img {
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--gold);
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            border: 2px solid var(--gold);
         }
 
         .hero-text {
@@ -121,9 +97,8 @@
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--white);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
         }
 
         .hero h1 span {
@@ -131,20 +106,32 @@
         }
 
         .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            color: var(--light-gray);
-            max-width: 600px;
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            max-width: 500px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: var(--light-navy);
+            color: var(--gold);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--gold);
         }
 
         .btn {
             display: inline-block;
-            padding: 0.8rem 2rem;
+            padding: 0.6rem 1.2rem;
             background: var(--gold);
-            color: var(--black);
-            border-radius: 4px;
+            color: var(--navy);
+            border-radius: 3px;
             text-decoration: none;
-            font-weight: 600;
+            font-size: 0.9rem;
+            font-weight: 500;
             transition: all 0.3s;
         }
 
@@ -154,95 +141,124 @@
             outline: 1px solid var(--gold);
         }
 
-        /* Skills Section */
-        .skills {
-            padding: 6rem 0;
-            background-color: var(--dark-gray);
+        /* Experience Section */
+        .experience {
+            padding: 2rem 0;
         }
 
         .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title h2 {
-            font-size: 2rem;
+            font-size: 1.3rem;
             color: var(--white);
+            margin-bottom: 1.5rem;
             position: relative;
             display: inline-block;
         }
 
-        .section-title h2::after {
+        .section-title:after {
             content: '';
             position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 2px;
             background: var(--gold);
         }
 
+        .experience-card {
+            background: var(--light-navy);
+            padding: 1.2rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .experience-card h3 {
+            font-size: 1rem;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+        }
+
+        .experience-date {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .experience-card p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
         }
 
-        .skill-card {
-            background: var(--medium-gray);
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .skill-category {
+            margin-bottom: 1.5rem;
         }
 
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        .skill-icon {
-            font-size: 2.5rem;
+        .skill-category h3 {
+            font-size: 1rem;
             color: var(--gold);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .skill-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--white);
+        .skill-item {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 0.3rem;
+            position: relative;
+            padding-left: 1.2rem;
         }
 
-        .skill-card p {
-            color: var(--light-gray);
-            font-size: 0.95rem;
+        .skill-item:before {
+            content: "•";
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Career Goals */
+        .career-goals {
+            background: var(--light-navy);
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .career-goals h3 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .career-goals p {
+            font-size: 0.9rem;
+            color: var(--gray);
         }
 
         /* Contact Section */
         .contact {
-            padding: 6rem 0;
-        }
-
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
+            padding: 2rem 0 3rem;
         }
 
         .contact-info {
-            margin-top: 2rem;
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
         }
 
         .contact-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--light-gray);
+            color: var(--white);
             text-decoration: none;
-            margin: 0 1rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
             transition: color 0.3s;
         }
 
@@ -251,42 +267,48 @@
         }
 
         .contact-link svg {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
         }
 
         /* Footer */
         footer {
-            background-color: var(--dark-gray);
-            padding: 2rem 0;
             text-align: center;
-            border-top: 1px solid var(--medium-gray);
+            padding: 1rem 0;
+            font-size: 0.8rem;
+            color: var(--gray);
+            border-top: 1px solid var(--light-navy);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 0 1.5rem;
+            }
+            
             .hero-content {
                 flex-direction: column;
                 text-align: center;
+                gap: 1.5rem;
             }
 
             .hero-img {
-                width: 220px;
-                height: 220px;
-                margin-bottom: 2rem;
+                width: 160px;
+                height: 160px;
             }
 
             .hero p {
-                margin-left: auto;
-                margin-right: auto;
+                margin: 0 auto 1rem;
             }
 
-            .skills-grid {
-                grid-template-columns: 1fr;
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -295,6 +317,7 @@
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -305,35 +328,60 @@
     <main>
         <section id="about" class="hero">
             <div class="container hero-content">
-                <img src="images/profile.jpg" alt="Professional Portrait" class="hero-img">
+                <img src="images/profile.jpg" alt="Preetha Dsouza" class="hero-img">
                 <div class="hero-text">
-                    <h1>Company <span>Secretary</span></h1>
-                    <p>Dedicated professional specializing in corporate governance, compliance, and legal advisory services. Committed to ensuring organizations meet statutory requirements while maintaining operational efficiency.</p>
-                    <a href="https://drive.google.com/file/d/1xOWUM61o1wNjqJLC5eCFJFYTF2i0uuG0/view?usp=drive_link" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
+                    <div class="status-badge">CS Executive (Ongoing)</div>
+                    <h1>CS <span>Management Trainee</span> Candidate</h1>
+                    <p>Aspiring Company Secretary with expertise in corporate governance, compliance, and legal frameworks. Seeking a management trainee position to develop expertise in corporate secretarial practice with additional strengths in marketing and HR.</p>
+                    <a href="https://drive.google.com/file/d/1xOWUM61o1wNjqJLC5eCFJFYTF2i0uuG0/view?usp=drive_link" class="btn" target="_blank">Download CV</a>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="skills">
+        <section id="experience" class="experience">
             <div class="container">
-                <div class="section-title">
-                    <h2>Professional Skills</h2>
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-card">
+                    <h3>Legal Compliance & Internal Audit Intern</h3>
+                    <div class="experience-date">[Month Year] - [Month Year]</div>
+                    <p>Conducted internal audits to ensure regulatory compliance, prepared legal documentation, and assisted in developing compliance frameworks.</p>
                 </div>
+                <div class="experience-card">
+                    <h3>LinkedIn Marketing Handler</h3>
+                    <div class="experience-date">[Month Year] - [Month Year]</div>
+                    <p>Managed corporate LinkedIn presence, creating engaging content to enhance professional branding and audience engagement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="experience">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                
+                <div class="career-goals">
+                    <h3>Career Objective</h3>
+                    <p>Seeking a CS Management Trainee position to leverage my legal compliance knowledge while developing expertise in corporate governance, with opportunities to contribute my marketing and HR skills.</p>
+                </div>
+
                 <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">📋</div>
-                        <h3>Corporate Governance</h3>
-                        <p>Expert in developing and implementing governance frameworks that ensure compliance and operational excellence.</p>
+                    <div class="skill-category">
+                        <h3>Corporate Secretarial</h3>
+                        <div class="skill-item">Companies Act Compliance</div>
+                        <div class="skill-item">Board Meeting Procedures</div>
+                        <div class="skill-item">Statutory Records Maintenance</div>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">⚖️</div>
-                        <h3>Regulatory Compliance</h3>
-                        <p>Ensuring adherence to all statutory and regulatory requirements with meticulous attention to detail.</p>
+                    <div class="skill-category">
+                        <h3>Marketing & HR</h3>
+                        <div class="skill-item">LinkedIn Marketing</div>
+                        <div class="skill-item">Content Creation</div>
+                        <div class="skill-item">HR Processes</div>
+                        <div class="skill-item">Employee Engagement</div>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">📑</div>
-                        <h3>Legal Advisory</h3>
-                        <p>Providing expert guidance on corporate legal matters and board advisory services.</p>
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-item">MS Office Suite</div>
+                        <div class="skill-item">Tally Prime with GST</div>
+                        <div class="skill-item">Internal Auditing</div>
                     </div>
                 </div>
             </div>
@@ -341,28 +389,23 @@
 
         <section id="contact" class="contact">
             <div class="container">
-                <div class="contact-container">
-                    <div class="section-title">
-                        <h2>Get In Touch</h2>
-                    </div>
-                    <p>For professional inquiries regarding corporate governance and compliance services:</p>
-                    <div class="contact-info">
-                        <a href="mailto:preethadsouza.official@gmail.com" class="contact-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            preethadsouza.official@gmail.com
-                        </a>
-                        <a href="https://www.linkedin.com" target="_blank" class="contact-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                            LinkedIn Profile
-                        </a>
-                    </div>
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-info">
+                    <a href="mailto:preethadsouza.official@gmail.com" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        preethadsouza.official@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn Profile
+                    </a>
                 </div>
             </div>
         </section>
@@ -370,7 +413,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Preetha Dsouza - Company Secretary. All rights reserved.</p>
+            <p>&copy; 2024 Preetha Dsouza. All rights reserved.</p>
         </div>
     </footer>
 </body>
